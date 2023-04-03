@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap library. -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+<!--  jQuery UI library. -->
+  <link
+rel="stylesheet"
+href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+>
+<!-- Font Awesome library. -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" >
+<!-- Montserrat font. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"> 
+<link rel="stylesheet" href= ./assets/style.css>
+
+  <title>Weather Watch!</title>
+</head>
+<body>
+  <!-- Header -->
+<header class="bg-primary bg-gradient py">
+  <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
+      <h1 class="text-dark display-4 fw-bold mb-0 mb-md-3">Weather Watch</h1>
+      <p class="text-white h5 d-none d-md-block mb-0">Get your Forecast here!</p>
+  </div>
+</header>
+
+<main class="container m-y4"> 
+  <div class="row">
+    <!-- Search bar -->
+    <div class="col-md-4 mb-3">
+    <div class="input-group">
+        <input
+        type="text"
+        class="form-control"
+        id="searchCityInput"
+        placeholder="Search city"
+        aria-label="Search city"
+        aria-describedby="button-addon2"
+        />
+        <button class="btn btn-danger" type="button" id="button-addon2">
+        Search
+        </button>
+    </div>
+    </div>
+  </div>
+  
+<!-- Five Day Forecast -->
+  <div class="col-md-8 mb-3 d-none d-md-block mb-0 container-fluid">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Five Day Forecast</h5>
+            <div class="forecast-container">
+                <p>Loading forecast...</p>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="col-md-8 mb-3 d-none d-md-block mb-0 container-fluid">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Current Day</h5>
+            <div class="current-day-container">
+                <p>Loading... </p>
+            </div>
+        </div>
+    </div>
+  </div>
+<!-- City card -->
+<div class="col-md-8 mb-3 container-fluid">
+<div class="card">
+    <div class="card-body">
+    <h5 class="default-city-name">City</h5>
+    <p class="city-temp">Temp: 100</p>
+    <p class="wind-speed">Wind: 125mph</p>
+    <button class="btn btn-success" type="button">
+        Add to Favorites
+    </button>
+    </div>
+</div>
+</div>
+</div>
+
+<!-- Favorites Bar Card -->
+<div class="row mt-4">
+<div class="col">
+<table class="table">
+  <thead>
+    <tr>
+      <th>City Name</th>
+      <th>Temperature</th>
+      <th>Wind Speed</th>
+    </tr>
+  </thead>
+
+</table>
+</div>
+
+</div>
+</main>
+
+      <!-- CDN for the dayjs library. -->
+      <script
+      src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+      crossorigin="anonymous"
+  ></script>
+  <!-- CDN for the jQuery library. -->
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <!-- CDN for the Bootstrap library. -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+      <script src="assets/script.js"></script>
+</body>
+</html>
